@@ -24,7 +24,9 @@ function shadow(e){
   const xWalk = Math.round((x / width * walk) - (walk / 2)); // changes from 50 to -1 instead of counting from 0 - 100
   const yWalk = Math.round((y / width * walk) - (walk / 2));
 
-  text.style.textShadow = `${xWalk}px ${yWalk}px 0 red`;
+  text.style.textShadow = `${xWalk}px ${yWalk}px 0 red,
+                           ${xWalk * -1}px ${yWalk}px 0 blue
+  `;
 }
 
 hero.addEventListener('mousemove', shadow);
